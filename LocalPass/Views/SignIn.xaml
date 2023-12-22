@@ -1,0 +1,91 @@
+﻿<Page x:Class="LocalPass.LandingPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:LocalPass"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      VerticalAlignment="Stretch"
+      HorizontalAlignment="Stretch"
+      Title="SignIn">
+
+    <Grid Style="{StaticResource gradientBackground}"
+          Width="800"
+          Height="450"
+          HorizontalAlignment="Stretch"
+          VerticalAlignment="Stretch">
+            
+        <StackPanel>
+            <Label 
+                Content="SIGN IN" 
+                HorizontalAlignment="Center" 
+                FontSize="40" 
+                FontWeight="ExtraLight" 
+                Foreground="White"/>
+            <Image 
+                Source="/img/lock-Icon.png" 
+                Height="60" 
+                Width="auto"/>
+            <GroupBox 
+                Width="400" 
+                Height="170" 
+                Foreground="White" 
+                FontWeight="ExtraLight" 
+                BorderThickness="0">
+                <StackPanel VerticalAlignment="Center">
+                    <Label 
+                        Content="Username" 
+                        Foreground="White" 
+                        FontWeight="ExtraLight"/>
+                    <TextBox x:Name="signInUsername"
+                             Height="30"
+                             FontSize="18" />
+                    <Label 
+                        Content="Password" 
+                        Foreground="White" 
+                        FontWeight="ExtraLight"/>
+                    <PasswordBox x:Name="signInPassword"
+                                 Height="30"
+                                 FontSize="18" />
+                    <DockPanel 
+                        Margin="0,10,0,0" 
+                        Height="30">
+                        <Button 
+                            x:Name="signInExit" 
+                            Content="Exit"  
+                            Width="100" 
+                            Background="Transparent" 
+                            Foreground="White" 
+                            BorderBrush="White" 
+                            HorizontalAlignment="Left" 
+                            Click="signInExit_Click"/>
+                        <Button 
+                            x:Name="signInAccount" 
+                            Content="Sign In"  
+                            Width="100" Background="Transparent" 
+                            Foreground="White" 
+                            BorderBrush="White" 
+                            HorizontalAlignment="Right" 
+                            Click="signInAccount_Click"/>
+                    </DockPanel>
+                </StackPanel>
+            </GroupBox>
+            <TextBlock 
+                x:Name="signInErrorMessage"  
+                Width="auto"
+                HorizontalAlignment="Center" 
+                Foreground="White" />
+            <TextBlock 
+                Width="auto" 
+                HorizontalAlignment="Center">
+                <Hyperlink 
+                    Click="Hyperlink_Click" 
+                    Foreground="White" 
+                    FontWeight="ExtraLight">
+                    Register
+                </Hyperlink>
+            </TextBlock>
+        </StackPanel>
+    </Grid>
+</Page>
